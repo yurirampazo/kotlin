@@ -26,4 +26,6 @@ fun main() {
     val byte: UByte = 10u
     val long: ULong = 10u
 
+    System.out.printf("teste %d legal", short) // -> Causes error
+
 }
