@@ -18,5 +18,7 @@ fun convertYears(years: Int) {
 }
 
 fun powOfThree(num: Float): Float = (num * num * num)
+fun powOfThree2(num: Float) = (num * num * num)
 
 fun replaceAWithX(str: String): String = str.replace(Regex("[A|a]"), "x").lowercase()
+fun replaceAWithX2(str: String) = str.replace(Regex("[A|a]"), "x").lowercase()
