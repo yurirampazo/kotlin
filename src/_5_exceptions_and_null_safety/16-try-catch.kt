@@ -13,7 +13,7 @@ fun main() {
   } catch (e: ArithmeticException) {
     println("You can't divide a number by 0")
   } catch (e: Exception) {
-    println("Generic exception! Not good using it")
+    println("Generic exception! Not good using it!!")
   }
 
   finally {
