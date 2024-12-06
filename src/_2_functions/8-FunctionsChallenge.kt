@@ -1,3 +1,5 @@
+package _2_functions
+
 fun main() {
     convertYears(3)
     println(powOfThree(3F))

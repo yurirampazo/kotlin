@@ -1,3 +1,5 @@
+package _3_conditions
+
 fun main() {
     var bonus = 0F
     val role =  "MANAGER"

@@ -1,3 +1,5 @@
+package _2_functions
+
 fun main() {
     helloWorld()
     val a = 1

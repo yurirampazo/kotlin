@@ -1,3 +1,5 @@
+package _2_functions
+
 fun main() {
     val str = "Testing"
 

@@ -1,3 +1,5 @@
+package _1_fundamentals
+
 /**
  * Type     Bit
  * Double   64

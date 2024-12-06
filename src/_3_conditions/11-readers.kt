@@ -1,3 +1,5 @@
+package _3_conditions
+
 fun main() {
   val str = readLine()
 

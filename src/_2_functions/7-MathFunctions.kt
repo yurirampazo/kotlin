@@ -1,3 +1,5 @@
+package _2_functions
+
 import kotlin.math.*
 
 fun main() {

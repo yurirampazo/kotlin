@@ -1,3 +1,5 @@
+package _4_loops
+
 fun main() {
 
   for (i in 1..10) {
