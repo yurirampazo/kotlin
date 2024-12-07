@@ -20,6 +20,11 @@ fun main() {
     println("$char")
   }
 
+  val testList = listOf("Yuri", "Jana", "Katiau", "Wilton")
+  for (n in testList) {
+    println("$n is part of the family")
+  }
+
 }
 
 
