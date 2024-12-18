@@ -1,4 +1,4 @@
-package _6_oop.entities
+package _6_oop._1entities
 
 class Planet(name: String) {
   var primaryStar: String = ""

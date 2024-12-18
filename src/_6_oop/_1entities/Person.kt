@@ -1,4 +1,4 @@
-package _6_oop.entities
+package _6_oop._1entities
 
 class Person(val birthYear: Int, var name: String) {
 

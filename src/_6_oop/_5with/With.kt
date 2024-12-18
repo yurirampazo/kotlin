@@ -1,6 +1,6 @@
-package _6_oop.with
+package _6_oop._5with
 
-import _6_oop.entities.Person
+import _6_oop._1entities.Person
 
 fun main() {
 

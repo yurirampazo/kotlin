@@ -1,4 +1,4 @@
-package _6_oop.enums
+package _6_oop._2enums
 
 enum class Priority(val value: Int) {
   LOW(1) {

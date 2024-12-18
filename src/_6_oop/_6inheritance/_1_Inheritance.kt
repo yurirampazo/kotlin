@@ -1,4 +1,4 @@
-package _6_oop.inheritance
+package _6_oop._6inheritance
 
 open class Car(var model: String) {
 

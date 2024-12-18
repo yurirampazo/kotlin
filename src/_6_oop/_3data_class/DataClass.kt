@@ -1,4 +1,4 @@
-package _6_oop.data_class
+package _6_oop._3data_class
 
 fun main() {
   val f = Shape(10, 8)
