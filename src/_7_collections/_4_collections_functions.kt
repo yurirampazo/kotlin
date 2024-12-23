@@ -1,7 +1,5 @@
 package _7_collections
 
-import _2_functions.sum
-
 fun generateData(): List<Receip> {
   return listOf(
     Receip(
@@ -21,6 +19,16 @@ fun generateData(): List<Receip> {
         Ingredient("Tomatoes", 3),
         Ingredient("Ham", 1),
       )
+    ),
+    Receip(
+      "Light cake", 450,
+      listOf(
+        Ingredient("Eggs", 2),
+        Ingredient("Vanilla", 1),
+        Ingredient("Wheat flour", 1),
+        Ingredient("Banana", 2),
+        Ingredient("Dark Chocolate", 1),
+      )
     )
   )
 }
@@ -31,8 +39,15 @@ data class Ingredient(val name: String, val quantity: Int)
 fun main() {
   val data = generateData()
 
-  println("Has data? ${if(data.any()) "yes" else "nope"}")
-  println("Has data? ${if(listOf<Int>().any()) "yes" else "nope"}")
+  /**
+   * Fundamental methods:
+   * - any
+   * - count
+   * - first
+   * - last
+   * */
+  println("Has data? ${if (data.any()) "yes" else "nope"}")
+  println("Has data? ${if (listOf<Int>().any()) "yes" else "nope"}")
 
   println("There are ${data.count()} elements")
 
@@ -41,7 +56,10 @@ fun main() {
   println("First: ${data.first()}")
   println("Last: ${data.last()}")
 
-
+  /**
+   *
+   * Checking for null lists or indexes
+   * */
   println(listOf<Any>().indexOf(0)) // returns -1, good to check without exception
 //  listOf<Any>().first() //No such element exception
   println(listOf<Any>().firstOrNull())
@@ -52,6 +70,11 @@ fun main() {
   println(listOf<Int>().sum())
 //  println(listOf<Any>().sum()) // illegal
 
+
+  /**
+   *
+   * Lambdas: Filter, any, count, Sum of...
+   * */
   val sumOf = data.sumOf { it.calories }
   println("Total calories: $sumOf")
 
@@ -65,6 +88,23 @@ fun main() {
   val count = data.count() { it.calories > 100 }
   println(any)
   println(count)
+2
+  /**
+   * Take and take last
+   * */
+  println(data.take(2))
+  println(data.takeLast(2))
+
+  /**
+   * ForEach
+   * */
+  data.forEach { println("Receip: ${data.indexOf(it) + 1} -> ${it.name}") }
+  data.filter { it.calories > 500 }.forEach { println("${it.name} has more than 500 calories") }
+
+  /**
+   * Max and min
+   * */
+
 
 
 }
