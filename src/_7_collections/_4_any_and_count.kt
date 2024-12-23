@@ -34,4 +34,14 @@ fun main() {
 
   println("There are ${data.count()} elements")
 
+  println("First Name: ${data.first().name}")
+  println("Last Name: ${data.last().name}")
+  println("First: ${data.first()}")
+  println("Last: ${data.last()}")
+
+
+  println(listOf<Any>().indexOf(0)) // returns -1, good to check without exception
+//  listOf<Any>().first() //No such element exception
+  println(listOf<Any>().firstOrNull())
+
 }
