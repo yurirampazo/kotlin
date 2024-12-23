@@ -1,5 +1,7 @@
 package _7_collections
 
+import _2_functions.sum
+
 fun generateData(): List<Receip> {
   return listOf(
     Receip(
@@ -43,5 +45,14 @@ fun main() {
   println(listOf<Any>().indexOf(0)) // returns -1, good to check without exception
 //  listOf<Any>().first() //No such element exception
   println(listOf<Any>().firstOrNull())
+
+
+
+  println(listOf(1, 2, 3).sum())
+  println(listOf<Int>().sum())
+//  println(listOf<Any>().sum()) // illegal
+
+  val sumOf = data.sumOf { it.calories }
+  println("Total calories: $sumOf")
 
 }
