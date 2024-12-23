@@ -55,4 +55,16 @@ fun main() {
   val sumOf = data.sumOf { it.calories }
   println("Total calories: $sumOf")
 
+  val filter = data.filter { it.name == "Lasagna" }
+  val filter2 = data.filter { it.calories >= 500 }
+
+  println("Filter: $filter")
+  println("Filter 2: $filter2")
+
+  val any = data.any() { it.calories > 100 }
+  val count = data.count() { it.calories > 100 }
+  println(any)
+  println(count)
+
+
 }
