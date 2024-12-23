@@ -1,11 +1,14 @@
 package _7_collections
 
+import kotlin.math.max
+
 fun generateData(): List<Receip> {
   return listOf(
     Receip(
       "Carbonnara", 1200,
       listOf(
-        Ingredient("pasta package", 2),
+        Ingredient("pasta package", 4),
+        Ingredient("Tomatoes", 4),
         Ingredient("Guanchale", 1),
         Ingredient("Eggs", 3),
         Ingredient("Black Pepper", 1),
@@ -88,7 +91,7 @@ fun main() {
   val count = data.count() { it.calories > 100 }
   println(any)
   println(count)
-2
+
   /**
    * Take and take last
    * */
@@ -104,7 +107,16 @@ fun main() {
   /**
    * Max and min
    * */
+  println(data.maxOf { it.calories })
+  println(data.minOf { it.calories })
+  println("test "+ data.maxOf { it.ingredients.sumOf { it.quantity } })
 
+  listOf(1,3,4,6).maxOf { it }
+  listOf(1,3,4,6).maxOf { it }
 
+  listOf(1,3,4,6).maxOrNull()
+  listOf(1,3,4,6).minOrNull()
 
+  val maxByOrNull = data.maxByOrNull { it.calories }
+  println(maxByOrNull) //maxBy returns all object, max of gets number only
 }
