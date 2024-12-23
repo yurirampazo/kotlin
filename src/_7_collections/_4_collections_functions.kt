@@ -32,6 +32,16 @@ fun generateData(): List<Receip> {
         Ingredient("Banana", 2),
         Ingredient("Dark Chocolate", 1),
       )
+    ),
+    Receip(
+      "Light cake", 490,
+      listOf(
+        Ingredient("Eggs", 3),
+        Ingredient("Vanilla", 1),
+        Ingredient("Wheat flour", 1),
+        Ingredient("Banana", 2),
+        Ingredient("Dark Chocolate", 1),
+      )
     )
   )
 }
@@ -119,4 +129,54 @@ fun main() {
 
   val maxByOrNull = data.maxByOrNull { it.calories }
   println(maxByOrNull) //maxBy returns all object, max of gets number only
+
+  /**
+   * Map
+   * */
+  val map = data.map { it.name }
+  println(map)
+
+  val map2 = data.map { ReceipAndNIngredients(it.name, it.ingredients.count()) }
+  println(map2)
+
+  /**
+   * Average
+   * */
+  val average = data.map { it.calories }.average()
+  println(average)
+
+  /**
+   * Distinct
+   * Sorted
+   * Reversed
+   * */
+  val list = listOf(1, 2, 3, 4, 5, 6, 1, 3, 4, 5, 6)
+  val distinct = list.distinct()
+
+  println(list)
+  println(distinct)
+
+  val distinctBy = data.distinctBy { it }
+  val distinctBy2 = data.distinctBy { it.name }
+
+  println(distinctBy)
+  println(distinctBy2)
+
+  val sorted = list.sorted()
+  val sorted2 = list.sortedDescending()
+  println(sorted)
+  println("sorted descending" + sorted2)
+
+  println(sorted.reversed())
+  println("list reversed" + list.reversed())
+
+  val sortedBy = data.sortedBy { it.name }
+  println(sortedBy)
+
+  val sortedWith = data.sortedWith(compareBy { it.calories })
+  println(sortedWith)
+
+
 }
+
+data class ReceipAndNIngredients(val name: String, val nIngredient: Int)
